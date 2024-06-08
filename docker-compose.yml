@@ -2,12 +2,12 @@ version: '3'
 
 services:
   jellyfin_exporter:
-    image: drkhsh/jellyfin-exporter:dev
+    image: docker.io/library/jellyfin_exporter:0.2
     container_name: jellyfin_exporter
     ports:
       - 9027:9027
     environment:
-      - JELLYFIN_BASEURL=<BASEURL>
-      - JELLYFIN_APIKEY=<APIKEY>
+      - JELLYFIN_BASEURL=
+      - JELLYFIN_APIKEY=
     restart: unless-stopped
 
